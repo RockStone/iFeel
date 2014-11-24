@@ -13,8 +13,9 @@ class Api::MusicController < ApplicationController
       end
       track = tag.top_tracks.first
       #track.scrobble(Time.now)
+      #debugger
+      render json: {url: "#{track.url}?autoplay=true"}
 
-
-    render json: {url: track.url}
+     #render json: {url: track.url}
   end
 end
